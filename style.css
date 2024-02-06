@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playpen Sans', cursive;
+  background-color: rgb(25, 25, 25);
+  color: #fff;
+}
+
+.heading-primary {
+  font-size: 48px;
+  margin-bottom: 32px;
+}
+
+.container {
+  /* max-width: fit-content; */
+  margin: 130px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.coin-img {
+  width: 200px;
+  filter: brightness(90%);
+  transition: all 0.1s;
+}
+
+.coin-img:hover {
+  transform: translateY(10px);
+}
+
+.coin-img:active {
+  transform: translateY(-100px);
+}
+
+.heads-button,
+.tails-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.reset-button {
+  background-color: transparent;
+  background-color: #f59e0b;
+  border: none;
+  font-family: 'Playpen Sans', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  padding: 20px;
+  align-self: center;
+  border-radius: 50px;
+  box-shadow: 0 0px 4px 3px #f59e0b;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.reset-button:hover {
+  background-color: #d97706;
+  box-shadow: none;
+}
+
+.reset-button:active {
+  background-color: #fbbf24;
+}
+
+.buttons-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.result-paragraph,
+.scores-paragraph {
+  font-size: 30px;
+  font-weight: bold;
+}

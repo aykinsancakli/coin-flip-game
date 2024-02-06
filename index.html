@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Coin Flip Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading-primary">Coin Flip</h1>
+      <div class="buttons-wrapper">
+        <button
+          onclick="
+      playGame('heads')
+      "
+          class="js-heads-button heads-button coin-btn"
+        >
+          <img src="images/heads.png" alt="heads" class="coin-img" />
+        </button>
+
+        <button
+          onclick="
+    playGame('tails')
+    "
+          class="js-tails-button tails-button coin-btn"
+        >
+          <img src="images/tails.png" alt="tails" class="coin-img" />
+        </button>
+
+        <button
+          onclick="
+    scores.wins = 0;
+    scores.losses = 0;
+    localStorage.removeItem('score');
+    document.querySelector('.js-scores-paragraph').innerText = `Wins: ${scores.wins}, Losses: ${scores.losses}`;
+    document.querySelector('.js-result-paragraph').innerText = '?';
+    "
+          class="reset-button"
+        >
+          Reset Score
+        </button>
+      </div>
+      <div class="text-wrapper">
+        <p class="js-result-paragraph result-paragraph"></p>
+        <p class="js-scores-paragraph scores-paragraph"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
